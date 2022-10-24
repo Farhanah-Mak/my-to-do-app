@@ -1,0 +1,109 @@
+
+body{
+    background-color: whitesmoke;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: monospace;
+    
+}
+.app{
+    visibility: visible;
+    overflow-y: scroll;
+}
+.app, .pop-up{
+    width: 300px;
+    height: 550px;
+    border: 5px solid black;
+    border-radius: 5px;
+   
+}
+.app::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+.title{
+    text-align: center;
+}
+.add-new-title{
+    background-color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tasks-title{
+    text-align: center;
+}
+.tasks{
+    display: grid;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.tasks div{
+    /* border: x solid white; */
+    border: 2px solid black;
+    padding: 10px 30px;
+}
+.tasks .task h4,
+.tasks .task p{
+    text-transform: capitalize;
+}
+.tasks .task .date{
+    font-size: x-small;
+    color: gray;
+    margin-top: -10px;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.pop-container{
+    padding: 20px 30px;
+}
+.pop-title{
+    text-align: center;
+}
+.form{
+    display: block;
+    width: 100%;
+}
+.form-input{
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.footer{
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    padding: 10px 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.pop-up{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  visibility: hidden;
+}
+.pop-up.active{
+    visibility: visible;
+}
+.app.active{
+    visibility: hidden;
+}
+.msg{
+    color: red;
+}
